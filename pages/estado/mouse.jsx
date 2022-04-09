@@ -2,13 +2,9 @@ import { useState } from "react"
 
 export default function mouse(){
 
-    const arrayX = useState(0)
-    let x = arrayX[0]
-    const alterarX = arrayX[1]
-
-    const arrayY = useState(0)
-    let y = arrayY[0]
-    const alterarY = arrayY[1]
+    const [x, setX] = useState(0)
+    const [y, setY] = useState(0)
+    
 
    
     
@@ -23,8 +19,8 @@ export default function mouse(){
     }
 
     function quandoMover(ev){
-        alterarX(ev.clientX)
-        alterarY(ev.clientY)
+        setX(ev.clientX)
+        setY(ev.clientY)
       
         
     }
